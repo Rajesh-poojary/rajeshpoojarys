@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajesh Poojary | Senior Software Engineer</title>
+    <meta name="description" content="Portfolio of Rajesh Poojary — Senior Web Developer & Odoo ERP Developer.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.txt">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ========================= PAGE LOADER ========================= -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <div class="loader-text">RP</div>
+        </div>
+    </div>
+
+    <!-- ========================= SCROLL PROGRESS ========================= -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scroll-progress"></div>
+    </div>
+
+    <!-- ========================= BACKGROUND SHAPES ========================= -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- ========================= NAVIGATION ========================= -->
+    <header id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-text">Rajesh Poojary</span>
+                <div class="logo-dot"></div>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========================= HERO SECTION ========================= -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                
+                <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="hero-greeting">
+                        <span class="greeting-line"></span>
+                        <p>Hello, I'm</p>
+                    </div>
+                    
+                    <h1 class="hero-name">Rajesh Poojary</h1>
+                    
+                    <h2 class="hero-title">
+                        <span class="typed-text" id="typed-text"></span><span class="cursor">&nbsp;</span>
+                    </h2>
+                    
+                    <p class="hero-description">
+                        A highly experienced software engineer specializing in enterprise web applications 
+                        and Odoo ERP solutions. I craft scalable, high-performance systems with 
+                        world-class user experiences.
+                    </p>
+                    
+                    <div class="hero-cta">
+                        <a href="resume.pdf" class="btn btn-primary btn-glow" download>
+                            <span>Download Resume</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary btn-glass">
+                            <span>Contact Me</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                    <div class="image-glass-card" id="tilt-card">
+                        <div class="image-inner">
+                            <img src="images/profile.jpg" alt="Rajesh Poojary" class="profile-img">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <a href="#about" class="scroll-down" aria-label="Scroll down">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </a>
+        </section>
+
+        <!-- ========================= ABOUT SECTION ========================= -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-content" data-aos="fade-right" data-aos-delay="100">
+                        <h3 class="about-subtitle">Engineering Excellence</h3>
+                        <p class="about-text">
+                            With over <strong>5 years of dedicated experience</strong> as a Senior Web Developer and Odoo ERP Developer, 
+                            I have built a proven track record of architecting robust backend systems and delivering seamless, intuitive front-end interfaces.
+                        </p>
+                        <p class="about-text">
+                            My expertise lies in bridging the gap between complex business requirements and scalable technical solutions. 
+                            From customizing enterprise-grade ERP modules in Python to building lightning-fast web applications in PHP and modern JavaScript, 
+                            I approach every challenge with a focus on clean code, system architecture, and performance optimization.
+                        </p>
+                        
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Enterprise Architecture</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>ERP Customization</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Performance Optimization</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>API Integration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-stats-grid" data-aos="fade-left" data-aos-delay="200">
+                        <div class="stat-card glass-card">
+                            <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
+                            <div class="stat-number"><span class="counter" data-target="5">0</span>+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-icon"><i class="fas fa-layer-group"></i></div>
+                            <div class="stat-number"><span class="counter" data-target="50">0</span>+</div>
+                            <div class="stat-label">Projects Delivered</div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-icon"><i class="fas fa-cubes"></i></div>
+                            <div class="stat-number"><span class="counter" data-target="15">0</span>+</div>
+                            <div class="stat-label">ERP Modules</div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-icon"><i class="fas fa-server"></i></div>
+                            <div class="stat-number"><span class="counter" data-target="99">0</span>%</div>
+                            <div class="stat-label">Uptime Delivered</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= SKILLS SECTION ========================= -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Technical Expertise</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="skills-container">
+                    
+                    <!-- Backend & ERP -->
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="category-title">Backend & ERP</h3>
+                        <div class="skills-grid-premium">
+                            <div class="skill-card-premium glass-card">
+                                <div class="skill-icon-glow"><i class="fab fa-python"></i></div>
+                                <div class="skill-info">
+                                    <h4>Python & Odoo</h4>
+                                    <p>Enterprise ERP Customization</p>
+                                </div>
+                            </div>
+                            <div class="skill-card-premium glass-card">
+                                <div class="skill-icon-glow"><i class="fab fa-php"></i></div>
+                                <div class="skill-info">
+                                    <h4>PHP Frameworks</h4>
+                                    <p>CodeIgniter 4 & Laravel</p>
+                                </div>
+                            </div>
+                            <div class="skill-card-premium glass-card">
+                                <div class="skill-icon-glow"><i class="fas fa-database"></i></div>
+                                <div class="skill-info">
+                                    <h4>MySQL & Apache</h4>
+                                    <p>Database Architecture</p>
+                                </div>
+                            </div>
+                            <div class="skill-card-premium glass-card">
+                                <div class="skill-icon-glow"><i class="fas fa-network-wired"></i></div>
+                                <div class="skill-info">
+                                    <h4>REST APIs</h4>
+                                    <p>Seamless Integrations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frontend -->
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="category-title">Frontend Development</h3>
+                        <div class="skills-grid-premium">
+                            <div class="skill-card-premium glass-card">
+                                <div class="skill-icon-glow"><i class="fab fa-js"></i></div>
+                                <div class="skill-info">
+                                    <h4>JavaScript</h4>
+                                    <p>ES6+, jQuery, AJAX</p>
+                                </div>
+                            </div>
+                            <div class="skill-card-premium glass-card">
+                                <div class="skill-icon-glow"><i class="fab fa-html5"></i></div>
+                                <div class="skill-info">
+                                    <h4>HTML & CSS</h4>
+                                    <p>Animations & Modern UI</p>
+                                </div>
+                            </div>
+                            <div class="skill-card-premium glass-card">
+                                <div class="skill-icon-glow"><i class="fab fa-sass"></i></div>
+                                <div class="skill-info">
+                                    <h4>SASS / SCSS</h4>
+                                    <p>Advanced Styling</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cloud & DevOps -->
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="category-title">Cloud & Infrastructure</h3>
+                        <div class="skills-grid-premium">
+                            <div class="skill-card-premium glass-card">
+                                <div class="skill-icon-glow"><i class="fas fa-server"></i></div>
+                                <div class="skill-info">
+                                    <h4>Web Hosting</h4>
+                                    <p>VPS & Cloud Architecture</p>
+                                </div>
+                            </div>
+                            <div class="skill-card-premium glass-card">
+                                <div class="skill-icon-glow"><i class="fas fa-cloud"></i></div>
+                                <div class="skill-info">
+                                    <h4>Cloudflare</h4>
+                                    <p>DNS & MX Management</p>
+                                </div>
+                            </div>
+                            <div class="skill-card-premium glass-card">
+                                <div class="skill-icon-glow"><i class="fab fa-git-alt"></i></div>
+                                <div class="skill-info">
+                                    <h4>Git & GitHub</h4>
+                                    <p>Version Control</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design & Marketing -->
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                        <h3 class="category-title">Creative & Growth</h3>
+                        <div class="skills-grid-premium">
+                            <div class="skill-card-premium glass-card">
+                                <div class="skill-icon-glow"><i class="fas fa-palette"></i></div>
+                                <div class="skill-info">
+                                    <h4>Adobe Creative Suite</h4>
+                                    <p>Ps, Ai, Pr, Ae</p>
+                                </div>
+                            </div>
+                            <div class="skill-card-premium glass-card">
+                                <div class="skill-icon-glow"><i class="fas fa-chart-line"></i></div>
+                                <div class="skill-info">
+                                    <h4>Technical SEO</h4>
+                                    <p>Analytics & Google Ads</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= EXPERIENCE SECTION ========================= -->
+        <section id="experience" class="section experience-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Experience</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="timeline">
+                    
+                    <!-- Role 1 -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card glass-card">
+                            <div class="timeline-header">
+                                <div class="company-logo-placeholder">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div class="timeline-meta">
+                                    <h3 class="role-title">Senior Web Developer & Odoo Developer</h3>
+                                    <span class="company-name">Aitsun Technologies</span>
+                                </div>
+                                <div class="timeline-date">
+                                    <span class="badge">Oct 2020 – Present</span>
+                                </div>
+                            </div>
+                            <div class="timeline-body">
+                                <ul>
+                                    <li>Architect and maintain enterprise web applications utilizing PHP, CodeIgniter 4, and WordPress, ensuring high scalability and security.</li>
+                                    <li>Engineer custom Odoo ERP modules leveraging Python and XML to automate complex business workflows.</li>
+                                    <li>Develop highly responsive, accessible web interfaces utilizing HTML5, CSS3, Bootstrap, and modern JavaScript.</li>
+                                    <li>Design and integrate robust REST APIs facilitating seamless third-party service communication.</li>
+                                    <li>Orchestrate server deployments, managing hosting, DNS, SSL, and domain configurations for mission-critical applications.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Role 2 -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card glass-card">
+                            <div class="timeline-header">
+                                <div class="company-logo-placeholder">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <div class="timeline-meta">
+                                    <h3 class="role-title">Graphics Designer – Film & Animation</h3>
+                                    <span class="company-name">VR2 Production House</span>
+                                </div>
+                                <div class="timeline-date">
+                                    <span class="badge">Prior to 2020</span>
+                                </div>
+                            </div>
+                            <div class="timeline-body">
+                                <ul>
+                                    <li>Conceptualized and designed high-impact visual content and motion graphics for professional film and animation productions.</li>
+                                    <li>Collaborated cross-functionally with creative teams to deliver precise multimedia assets under tight deadlines.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Role 3 -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card glass-card">
+                            <div class="timeline-header">
+                                <div class="company-logo-placeholder">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <div class="timeline-meta">
+                                    <h3 class="role-title">Web Developer</h3>
+                                    <span class="company-name">Vels Technologies</span>
+                                </div>
+                                <div class="timeline-date">
+                                    <span class="badge">Prior to 2020</span>
+                                </div>
+                            </div>
+                            <div class="timeline-body">
+                                <ul>
+                                    <li>Contributed to the full software development lifecycle of client web applications, accelerating project delivery timelines.</li>
+                                    <li>Engineered functional modules and optimized existing codebase for performance enhancements.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= EDUCATION SECTION ========================= -->
+        <section id="education" class="section education-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Education</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="education-grid">
+                    
+                    <div class="edu-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="edu-year">2019</div>
+                        <h3 class="edu-degree">Bachelor of Computer Applications</h3>
+                        <h4 class="edu-school">Sri Vivekananda College, Puttur</h4>
+                        <p class="edu-univ">Mangalore University</p>
+                        <div class="edu-score">Aggregate: <span>74.48%</span></div>
+                    </div>
+
+                    <div class="edu-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="edu-icon"><i class="fas fa-book"></i></div>
+                        <div class="edu-year">2016</div>
+                        <h3 class="edu-degree">Pre-University Course (PUC)</h3>
+                        <h4 class="edu-school">Vittal Pre-University College</h4>
+                        <p class="edu-univ">Vitla</p>
+                        <div class="edu-score">Aggregate: <span>69.67%</span></div>
+                    </div>
+
+                    <div class="edu-card glass-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="edu-icon"><i class="fas fa-school"></i></div>
+                        <div class="edu-year">2014</div>
+                        <h3 class="edu-degree">SSLC</h3>
+                        <h4 class="edu-school">Government High School</h4>
+                        <p class="edu-univ">Salethur</p>
+                        <div class="edu-score">Aggregate: <span>60.16%</span></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= CONTACT SECTION ========================= -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="contact-wrapper glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-info-panel">
+                        <h3>Let's Connect</h3>
+                        <p>I'm currently exploring new opportunities as a Senior Software Engineer. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                        
+                        <div class="contact-details">
+                            <a href="mailto:rajeshmave6@gmail.com" class="contact-detail-item">
+                                <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                                <div class="detail-content">
+                                    <span class="label">Email</span>
+                                    <span class="value">rajeshmave6@gmail.com</span>
+                                </div>
+                            </a>
+                            <a href="tel:+919900489174" class="contact-detail-item">
+                                <div class="icon-box"><i class="fas fa-phone"></i></div>
+                                <div class="detail-content">
+                                    <span class="label">Phone</span>
+                                    <span class="value">+91 9900489174</span>
+                                </div>
+                            </a>
+                            <div class="contact-detail-item">
+                                <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="detail-content">
+                                    <span class="label">Location</span>
+                                    <span class="value">Karnataka, India</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/rajeshpoojary" target="_blank" class="social-icon" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/rajeshpoojary" target="_blank" class="social-icon" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-panel">
+                        <form id="contact-form" class="premium-form">
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <input type="text" id="name" required placeholder=" ">
+                                    <label for="name">Full Name</label>
+                                    <div class="input-line"></div>
+                                </div>
+                                <div class="input-group">
+                                    <input type="email" id="email" required placeholder=" ">
+                                    <label for="email">Email Address</label>
+                                    <div class="input-line"></div>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="subject" required placeholder=" ">
+                                <label for="subject">Subject</label>
+                                <div class="input-line"></div>
+                            </div>
+                            <div class="input-group">
+                                <textarea id="message" rows="4" required placeholder=" "></textarea>
+                                <label for="message">Your Message</label>
+                                <div class="input-line"></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================= FOOTER ========================= -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo">Rajesh Poojary</div>
+            <p class="copyright">&copy; 2026 Rajesh Poojary. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
