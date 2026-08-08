@@ -3,546 +3,411 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rajesh Poojary | Senior Software Engineer</title>
-    <meta name="description" content="Portfolio of Rajesh Poojary — Senior Web Developer & Odoo ERP Developer.">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/favicon.txt">
-    
+    <meta name="robots" content="noindex, nofollow">
+    <title>Rajesh Poojary | Interactive Resume</title>
+    <meta name="description" content="Interactive Resume of Rajesh Poojary — Senior Web Developer & Odoo ERP Developer">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@200;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- Main Stylesheet -->
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- ========================= PAGE LOADER ========================= -->
-    <div id="loader" class="loader">
-        <div class="loader-content">
-            <div class="loader-circle"></div>
-            <div class="loader-text">RP</div>
-        </div>
+    <!-- Cursor -->
+    <div id="cursor"></div>
+
+    <!-- Background Animation -->
+    <div class="bg-animation" aria-hidden="true">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+        <div class="bg-orb bg-orb-4"></div>
+        <div class="bg-orb bg-orb-5"></div>
     </div>
 
-    <!-- ========================= SCROLL PROGRESS ========================= -->
-    <div class="scroll-progress-container">
-        <div class="scroll-progress-bar" id="scroll-progress"></div>
-    </div>
-
-    <!-- ========================= BACKGROUND SHAPES ========================= -->
-    <div class="bg-shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-    </div>
-
-    <!-- ========================= NAVIGATION ========================= -->
-    <header id="navbar" class="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">
-                <span class="logo-text">Rajesh Poojary</span>
-                <div class="logo-dot"></div>
-            </a>
-
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#hero" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">
-                <span class="line line-1"></span>
-                <span class="line line-2"></span>
-                <span class="line line-3"></span>
-            </button>
+    <!-- ========================= HEADER ========================= -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <a href="#hero" class="header-logo hover-target" style="display: flex; align-items: flex-start;">
+                    <h2>Rajesh Poojary</h2>
+                    <span style="display: inline-block; width: 6px; height: 6px; background-color: #E2E1D8; border-radius: 50%; margin-top: 6px; margin-left: 2px;"></span>
+                </a>
+                <div class="header-nav">
+                    <a class="button button-dark button-sm hover-target header-talk" href="#contact">
+                        <span>Let's Talk</span>
+                        <span class="dot"></span>
+                    </a>
+                    <button id="nav-toggle" class="button button-white button-sm hover-target">
+                        <span>Menu</span>
+                        <span class="dot"></span>
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
 
+    <!-- Nav Overlay -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <!-- Nav Box -->
+    <div class="nav-box" id="nav-box">
+        <ul class="nav">
+            <li><a class="nav-link hover-target active" href="#hero"><i class="fas fa-arrow-right"></i> Home</a></li>
+            <li><a class="nav-link hover-target" href="#about"><i class="fas fa-arrow-right"></i> About</a></li>
+            <li><a class="nav-link hover-target" href="#experience"><i class="fas fa-arrow-right"></i> Experience</a></li>
+            <li><a class="nav-link hover-target" href="#skills"><i class="fas fa-arrow-right"></i> Skills</a></li>
+            <li><a class="nav-link hover-target" href="#education"><i class="fas fa-arrow-right"></i> Education</a></li>
+            <li><a class="nav-link hover-target" href="#personal"><i class="fas fa-arrow-right"></i> Personal</a></li>
+            <li><a class="nav-link hover-target" href="#contact"><i class="fas fa-arrow-right"></i> Contact</a></li>
+        </ul>
+    </div>
+
     <main>
-        <!-- ========================= HERO SECTION ========================= -->
+        <!-- ========================= HERO ========================= -->
         <section id="hero" class="hero-section">
-            <div class="container hero-container">
-                
-                <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
-                    <div class="hero-greeting">
-                        <span class="greeting-line"></span>
-                        <p>Hello, I'm</p>
-                    </div>
-                    
-                    <h1 class="hero-name">Rajesh Poojary</h1>
-                    
-                    <h2 class="hero-title">
-                        <span class="typed-text" id="typed-text"></span><span class="cursor">&nbsp;</span>
-                    </h2>
-                    
-                    <p class="hero-description">
-                        A highly experienced software engineer specializing in enterprise web applications 
-                        and Odoo ERP solutions. I craft scalable, high-performance systems with 
-                        world-class user experiences.
-                    </p>
-                    
-                    <div class="hero-cta">
-                        <a href="resume.pdf" class="btn btn-primary btn-glow" download>
-                            <span>Download Resume</span>
-                            <i class="fas fa-arrow-down"></i>
-                        </a>
-                        <a href="#contact" class="btn btn-secondary btn-glass">
-                            <span>Contact Me</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="hero-visual" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
-                    <div class="image-glass-card" id="tilt-card">
-                        <div class="image-inner">
-                            <img src="images/profile.jpg" alt="Rajesh Poojary" class="profile-img">
-                            <div class="image-overlay"></div>
-                        </div>
-                    </div>
-                </div>
-                
+            <div class="container text-center">
+                <h1 class="hero-heading stroke-text">Rajesh Poojary</h1>
             </div>
-            
-            <a href="#about" class="scroll-down" aria-label="Scroll down">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-            </a>
         </section>
 
-        <!-- ========================= ABOUT SECTION ========================= -->
-        <section id="about" class="section about-section">
+        <!-- ========================= ABOUT ========================= -->
+        <section id="about" class="about-section">
             <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h2 class="section-title">About Me</h2>
-                    <div class="title-line"></div>
-                </div>
-
                 <div class="about-grid">
-                    <div class="about-content" data-aos="fade-right" data-aos-delay="100">
-                        <h3 class="about-subtitle">Engineering Excellence</h3>
-                        <p class="about-text">
-                            With over <strong>5 years of dedicated experience</strong> as a Senior Web Developer and Odoo ERP Developer, 
-                            I have built a proven track record of architecting robust backend systems and delivering seamless, intuitive front-end interfaces.
-                        </p>
-                        <p class="about-text">
-                            My expertise lies in bridging the gap between complex business requirements and scalable technical solutions. 
-                            From customizing enterprise-grade ERP modules in Python to building lightning-fast web applications in PHP and modern JavaScript, 
-                            I approach every challenge with a focus on clean code, system architecture, and performance optimization.
-                        </p>
-                        
-                        <div class="about-highlights">
-                            <div class="highlight-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Enterprise Architecture</span>
-                            </div>
-                            <div class="highlight-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>ERP Customization</span>
-                            </div>
-                            <div class="highlight-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Performance Optimization</span>
-                            </div>
-                            <div class="highlight-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>API Integration</span>
-                            </div>
+
+                    <!-- Left: Biography -->
+                    <div class="about-col" style="order:1">
+                        <span class="sm-heading reveal">Biography</span>
+                        <p class="reveal">Senior Web Developer & Odoo ERP Developer with 5+ years of experience in PHP, CodeIgniter, WordPress, Odoo ERP customization, REST API integration, Microsoft 365 administration, server management, and Technical SEO.</p>
+
+                        <span class="sm-heading reveal" style="margin-top:36px">Skills</span>
+                        <ul class="list-inline-dot reveal">
+                            <li>Web Development</li>
+                            <li>Odoo ERP</li>
+                            <li>PHP</li>
+                            <li>SEO</li>
+                            <li>Graphic design</li>
+                        </ul>
+
+                        <span class="sm-heading reveal" style="margin-top:36px">Connect</span>
+                        <ul class="list-inline reveal">
+                            <li><a class="button-circle button-circle-sm hover-target" href="https://github.com/Rajesh-poojary" target="_blank"><i class="fab fa-github"></i></a></li>
+                            <li><a class="button-circle button-circle-sm hover-target" href="https://www.linkedin.com/in/rajesh-poojary-8ab97a269/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a class="button-circle button-circle-sm hover-target" href="https://www.instagram.com/rajesh_birwass?igsh=MW0yajZ0dXh0eDUwbw==" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a class="button-circle button-circle-sm hover-target" href="https://wa.me/919900489174" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Center: Avatar -->
+                    <div class="about-col text-center" style="order:2">
+                        <div class="hero-avatar reveal-scale">
+                            <img src="images/profile.jpg" alt="Rajesh Poojary">
                         </div>
                     </div>
 
-                    <div class="about-stats-grid" data-aos="fade-left" data-aos-delay="200">
-                        <div class="stat-card glass-card">
-                            <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
-                            <div class="stat-number"><span class="counter" data-target="5">0</span>+</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-card glass-card">
-                            <div class="stat-icon"><i class="fas fa-layer-group"></i></div>
-                            <div class="stat-number"><span class="counter" data-target="50">0</span>+</div>
-                            <div class="stat-label">Projects Delivered</div>
-                        </div>
-                        <div class="stat-card glass-card">
-                            <div class="stat-icon"><i class="fas fa-cubes"></i></div>
-                            <div class="stat-number"><span class="counter" data-target="15">0</span>+</div>
-                            <div class="stat-label">ERP Modules</div>
-                        </div>
-                        <div class="stat-card glass-card">
-                            <div class="stat-icon"><i class="fas fa-server"></i></div>
-                            <div class="stat-number"><span class="counter" data-target="99">0</span>%</div>
-                            <div class="stat-label">Uptime Delivered</div>
-                        </div>
+                    <!-- Right: Stats -->
+                    <div class="about-col text-end" style="order:3">
+                        <span class="sm-heading reveal-right">Years of Experience</span>
+                        <div class="stat-number reveal-right">5+</div>
+
+                        <span class="sm-heading reveal-right" style="margin-top:48px">Current Role</span>
+                        <h3 class="reveal-right" style="font-size:18px;font-weight:500">Senior Web Developer & Odoo Developer</h3>
+                        <p class="reveal-right" style="font-size:14px;margin-top:4px">Aitsun Technologies</p>
+
+                        <span class="sm-heading reveal-right" style="margin-top:48px">Location</span>
+                        <h3 class="reveal-right" style="font-size:18px;font-weight:500">Mangaluru, Karnataka</h3>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- ========================= SKILLS SECTION ========================= -->
-        <section id="skills" class="section skills-section">
+        <!-- ========================= EXPERIENCE ========================= -->
+        <section id="experience" class="section section-alt">
             <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h2 class="section-title">Technical Expertise</h2>
-                    <div class="title-line"></div>
+                <div style="margin-bottom: 60px;">
+                    <span class="title-heading reveal" style="text-transform: uppercase; font-size: 11px; letter-spacing: 2px; color: var(--text-muted); display: block; margin-bottom: 12px; font-weight: 700;">EXPERIENCE</span>
+                    <h1 class="display-heading reveal">Career <span class="text-gradient">Timeline</span></h1>
+                </div>
+                
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <div class="timeline-wrapper stagger-children">
+                            
+                            <div class="timeline-item hover-target">
+                                <div class="timeline-dot"></div>
+                                <div class="fancy-box">
+                                    <div class="timeline-header">
+                                        <div class="timeline-icon"><i class="fas fa-building"></i></div>
+                                        <div class="timeline-title-area">
+                                            <h4>Senior Web Developer & Odoo Developer</h4>
+                                            <span class="sm-heading">Aitsun Technologies | Kasaragod, Karnataka</span>
+                                        </div>
+                                        <div class="timeline-date-badge">Oct 2020 – Present</div>
+                                    </div>
+                                    <ul class="timeline-bullets">
+                                        <li>Develop and maintain web applications using <strong>PHP, CodeIgniter 4, and WordPress</strong>.</li>
+                                        <li>Customize and develop <strong>Odoo ERP modules</strong> using <strong>Python and XML</strong> based on business requirements.</li>
+                                        <li>Develop responsive web interfaces using <strong>HTML5, CSS3, Bootstrap, JavaScript, and jQuery</strong>.</li>
+                                        <li>Integrate <strong>REST APIs</strong> and third-party services into web applications.</li>
+                                        <li>Implement <strong>Technical SEO</strong>, Schema Markup, <strong>Google Analytics 4 (GA4)</strong>, and <strong>Google Search Console</strong>.</li>
+                                        <li>Manage website deployment, hosting, <strong>DNS, SSL</strong>, domain, and email configurations.</li>
+                                        <li>Configure and support <strong>Microsoft 365</strong> services, including Outlook, OneDrive, and Teams.</li>
+                                        <li>Perform website and email migrations, server maintenance, and hosting management.</li>
+                                        <li>Design brochures, social media creatives, and company profile documents using <strong>Adobe Photoshop</strong> and <strong>Adobe Illustrator</strong>.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item hover-target">
+                                <div class="timeline-dot"></div>
+                                <div class="fancy-box">
+                                    <div class="timeline-header">
+                                        <div class="timeline-icon"><i class="fas fa-video"></i></div>
+                                        <div class="timeline-title-area">
+                                            <h4>Graphics Designer – Film & Animation</h4>
+                                            <span class="sm-heading">VR2 Production House | Mallikatte, Mangaluru</span>
+                                        </div>
+                                        <div class="timeline-date-badge">Prior to 2020</div>
+                                    </div>
+                                    <ul class="timeline-bullets">
+                                        <li>Designed visual content and motion graphics for film and animation productions.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item hover-target">
+                                <div class="timeline-dot"></div>
+                                <div class="fancy-box">
+                                    <div class="timeline-header">
+                                        <div class="timeline-icon"><i class="fas fa-laptop-code"></i></div>
+                                        <div class="timeline-title-area">
+                                            <h4>Web Developer</h4>
+                                            <span class="sm-heading">Vels Technologies | Chennai, Tamil Nadu</span>
+                                        </div>
+                                        <div class="timeline-date-badge">Prior to 2020</div>
+                                    </div>
+                                    <ul class="timeline-bullets">
+                                        <li>Contributed to web development projects, gaining professional delivery experience.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item hover-target">
+                                <div class="timeline-dot"></div>
+                                <div class="fancy-box">
+                                    <div class="timeline-header">
+                                        <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+                                        <div class="timeline-title-area">
+                                            <h4>Intern – Web Developer</h4>
+                                            <span class="sm-heading">BlueLine Computers | Mangalore, Karnataka</span>
+                                        </div>
+                                        <div class="timeline-date-badge">6 months | Prior to 2019</div>
+                                    </div>
+                                    <ul class="timeline-bullets">
+                                        <li>Completed foundational web development internship covering HTML, CSS, PHP, and project delivery basics.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= SKILLS ========================= -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div style="margin-bottom: 60px;">
+                    <span class="title-heading reveal" style="text-transform: uppercase; font-size: 11px; letter-spacing: 2px; color: var(--text-muted); display: block; margin-bottom: 12px; font-weight: 700;">CAPABILITIES</span>
+                    <h1 class="display-heading reveal">Technical <br><span class="text-gradient">Skills</span></h1>
                 </div>
 
-                <div class="skills-container">
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <div class="service-list stagger-children">
+                            <div class="service-card hover-target">
+                                <div class="service-num">01/</div>
+                                <div class="service-title-area">
+                                    <i class="fas fa-desktop"></i>
+                                    <h4>Frontend</h4>
+                                </div>
+                                <div class="service-desc">
+                                    HTML, CSS+Animation, SASS, JavaScript, jQuery and AJAX.
+                                </div>
+                            </div>
+                            
+                            <div class="service-card hover-target">
+                                <div class="service-num">02/</div>
+                                <div class="service-title-area">
+                                    <i class="fas fa-code"></i>
+                                    <h4>Backend</h4>
+                                </div>
+                                <div class="service-desc">
+                                    Core PHP, CodeIgniter 4, Laravel, Odoo customization, Python, API Integration.
+                                </div>
+                            </div>
+
+                            <div class="service-card hover-target">
+                                <div class="service-num">03/</div>
+                                <div class="service-title-area">
+                                    <i class="fas fa-server"></i>
+                                    <h4>Infra</h4>
+                                </div>
+                                <div class="service-desc">
+                                    Apache, MySQL, Web hosting (Shared, Cloud, VPS), Cloudflare (DNS/MX Records), Email management.
+                                </div>
+                            </div>
+
+                            <div class="service-card hover-target">
+                                <div class="service-num">04/</div>
+                                <div class="service-title-area">
+                                    <i class="fas fa-tools"></i>
+                                    <h4>Tools</h4>
+                                </div>
+                                <div class="service-desc">
+                                    Versioning with Git, Github, SEO & Google Ads, SMM, Adobe Photoshop, Illustrator, Premiere Pro, After Effect, Basic Computer Knowledge (MS Word, MS Excel, MS PowerPoint, Outlook).
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= EDUCATION ========================= -->
+        <section id="education" class="section section-alt">
+            <div class="container">
+                <div style="margin-bottom: 60px;">
+                    <span class="title-heading reveal" style="text-transform: uppercase; font-size: 11px; letter-spacing: 2px; color: var(--text-muted); display: block; margin-bottom: 12px; font-weight: 700;">ACADEMICS</span>
+                    <h1 class="display-heading reveal">Edu<span class="text-gradient">cation</span></h1>
+                </div>
+
+                <div class="personal-grid stagger-children" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
                     
-                    <!-- Backend & ERP -->
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="category-title">Backend & ERP</h3>
-                        <div class="skills-grid-premium">
-                            <div class="skill-card-premium glass-card">
-                                <div class="skill-icon-glow"><i class="fab fa-python"></i></div>
-                                <div class="skill-info">
-                                    <h4>Python & Odoo</h4>
-                                    <p>Enterprise ERP Customization</p>
-                                </div>
-                            </div>
-                            <div class="skill-card-premium glass-card">
-                                <div class="skill-icon-glow"><i class="fab fa-php"></i></div>
-                                <div class="skill-info">
-                                    <h4>PHP Frameworks</h4>
-                                    <p>CodeIgniter 4 & Laravel</p>
-                                </div>
-                            </div>
-                            <div class="skill-card-premium glass-card">
-                                <div class="skill-icon-glow"><i class="fas fa-database"></i></div>
-                                <div class="skill-info">
-                                    <h4>MySQL & Apache</h4>
-                                    <p>Database Architecture</p>
-                                </div>
-                            </div>
-                            <div class="skill-card-premium glass-card">
-                                <div class="skill-icon-glow"><i class="fas fa-network-wired"></i></div>
-                                <div class="skill-info">
-                                    <h4>REST APIs</h4>
-                                    <p>Seamless Integrations</p>
-                                </div>
-                            </div>
+                    <div class="fancy-box hover-target" style="text-align: center; padding: 48px 32px;">
+                        <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(108, 99, 255, 0.1); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 24px;">
+                            <i class="fas fa-graduation-cap text-gradient"></i>
                         </div>
+                        <div class="text-gradient" style="font-weight: 600; margin-bottom: 16px; font-size: 15px;">2019</div>
+                        <h4 style="font-size: 20px; margin-bottom: 12px; line-height: 1.4;">Bachelor of Computer<br>Applications</h4>
+                        <div style="font-size: 15px; color: var(--text-muted); margin-bottom: 6px;">Sri Vivekananda College, Puttur</div>
+                        <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 32px; opacity: 0.7;">Mangalore University</div>
+                        <div style="height: 1px; background: var(--border); margin-bottom: 24px;"></div>
+                        <div style="font-size: 15px; color: var(--text-muted);">Aggregate: <span style="font-weight: 700; color: var(--text);">74.48%</span></div>
                     </div>
 
-                    <!-- Frontend -->
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="category-title">Frontend Development</h3>
-                        <div class="skills-grid-premium">
-                            <div class="skill-card-premium glass-card">
-                                <div class="skill-icon-glow"><i class="fab fa-js"></i></div>
-                                <div class="skill-info">
-                                    <h4>JavaScript</h4>
-                                    <p>ES6+, jQuery, AJAX</p>
-                                </div>
-                            </div>
-                            <div class="skill-card-premium glass-card">
-                                <div class="skill-icon-glow"><i class="fab fa-html5"></i></div>
-                                <div class="skill-info">
-                                    <h4>HTML & CSS</h4>
-                                    <p>Animations & Modern UI</p>
-                                </div>
-                            </div>
-                            <div class="skill-card-premium glass-card">
-                                <div class="skill-icon-glow"><i class="fab fa-sass"></i></div>
-                                <div class="skill-info">
-                                    <h4>SASS / SCSS</h4>
-                                    <p>Advanced Styling</p>
-                                </div>
-                            </div>
+                    <div class="fancy-box hover-target" style="text-align: center; padding: 48px 32px;">
+                        <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(108, 99, 255, 0.1); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 24px;">
+                            <i class="fas fa-book-open text-gradient"></i>
                         </div>
+                        <div class="text-gradient" style="font-weight: 600; margin-bottom: 16px; font-size: 15px;">2016</div>
+                        <h4 style="font-size: 20px; margin-bottom: 12px; line-height: 1.4;">Pre-University Course<br>(PUC)</h4>
+                        <div style="font-size: 15px; color: var(--text-muted); margin-bottom: 6px;">Vittal Pre-University College</div>
+                        <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 32px; opacity: 0.7;">Vitla</div>
+                        <div style="height: 1px; background: var(--border); margin-bottom: 24px;"></div>
+                        <div style="font-size: 15px; color: var(--text-muted);">Aggregate: <span style="font-weight: 700; color: var(--text);">69.67%</span></div>
                     </div>
 
-                    <!-- Cloud & DevOps -->
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-                        <h3 class="category-title">Cloud & Infrastructure</h3>
-                        <div class="skills-grid-premium">
-                            <div class="skill-card-premium glass-card">
-                                <div class="skill-icon-glow"><i class="fas fa-server"></i></div>
-                                <div class="skill-info">
-                                    <h4>Web Hosting</h4>
-                                    <p>VPS & Cloud Architecture</p>
-                                </div>
-                            </div>
-                            <div class="skill-card-premium glass-card">
-                                <div class="skill-icon-glow"><i class="fas fa-cloud"></i></div>
-                                <div class="skill-info">
-                                    <h4>Cloudflare</h4>
-                                    <p>DNS & MX Management</p>
-                                </div>
-                            </div>
-                            <div class="skill-card-premium glass-card">
-                                <div class="skill-icon-glow"><i class="fab fa-git-alt"></i></div>
-                                <div class="skill-info">
-                                    <h4>Git & GitHub</h4>
-                                    <p>Version Control</p>
-                                </div>
-                            </div>
+                    <div class="fancy-box hover-target" style="text-align: center; padding: 48px 32px;">
+                        <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(108, 99, 255, 0.1); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 24px;">
+                            <i class="fas fa-school text-gradient"></i>
                         </div>
-                    </div>
-
-                    <!-- Design & Marketing -->
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
-                        <h3 class="category-title">Creative & Growth</h3>
-                        <div class="skills-grid-premium">
-                            <div class="skill-card-premium glass-card">
-                                <div class="skill-icon-glow"><i class="fas fa-palette"></i></div>
-                                <div class="skill-info">
-                                    <h4>Adobe Creative Suite</h4>
-                                    <p>Ps, Ai, Pr, Ae</p>
-                                </div>
-                            </div>
-                            <div class="skill-card-premium glass-card">
-                                <div class="skill-icon-glow"><i class="fas fa-chart-line"></i></div>
-                                <div class="skill-info">
-                                    <h4>Technical SEO</h4>
-                                    <p>Analytics & Google Ads</p>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="text-gradient" style="font-weight: 600; margin-bottom: 16px; font-size: 15px;">2014</div>
+                        <h4 style="font-size: 20px; margin-bottom: 12px; line-height: 1.4;">SSLC<br>&nbsp;</h4>
+                        <div style="font-size: 15px; color: var(--text-muted); margin-bottom: 6px;">Government High School</div>
+                        <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 32px; opacity: 0.7;">Salethur</div>
+                        <div style="height: 1px; background: var(--border); margin-bottom: 24px;"></div>
+                        <div style="font-size: 15px; color: var(--text-muted);">Aggregate: <span style="font-weight: 700; color: var(--text);">60.16%</span></div>
                     </div>
 
                 </div>
             </div>
         </section>
 
-        <!-- ========================= EXPERIENCE SECTION ========================= -->
-        <section id="experience" class="section experience-section">
+        <!-- ========================= PERSONAL DETAILS ========================= -->
+        <section id="personal" class="section">
             <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h2 class="section-title">Experience</h2>
-                    <div class="title-line"></div>
-                </div>
+                <div class="split-layout">
+                    <div>
+                        <span class="title-heading reveal">About Me</span>
+                        <h1 class="display-heading reveal">Personal <span class="text-gradient">Details</span></h1>
 
-                <div class="timeline">
-                    
-                    <!-- Role 1 -->
-                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-card glass-card">
-                            <div class="timeline-header">
-                                <div class="company-logo-placeholder">
-                                    <i class="fas fa-building"></i>
-                                </div>
-                                <div class="timeline-meta">
-                                    <h3 class="role-title">Senior Web Developer & Odoo Developer</h3>
-                                    <span class="company-name">Aitsun Technologies</span>
-                                </div>
-                                <div class="timeline-date">
-                                    <span class="badge">Oct 2020 – Present</span>
-                                </div>
-                            </div>
-                            <div class="timeline-body">
-                                <ul>
-                                    <li>Architect and maintain enterprise web applications utilizing PHP, CodeIgniter 4, and WordPress, ensuring high scalability and security.</li>
-                                    <li>Engineer custom Odoo ERP modules leveraging Python and XML to automate complex business workflows.</li>
-                                    <li>Develop highly responsive, accessible web interfaces utilizing HTML5, CSS3, Bootstrap, and modern JavaScript.</li>
-                                    <li>Design and integrate robust REST APIs facilitating seamless third-party service communication.</li>
-                                    <li>Orchestrate server deployments, managing hosting, DNS, SSL, and domain configurations for mission-critical applications.</li>
-                                </ul>
-                            </div>
+                        <span class="sm-heading reveal" style="margin-top:40px">Hobbies</span>
+                        <div class="hobbies-grid stagger-children">
+                            <div class="hobby-item"><i class="fas fa-headphones"></i> Music</div>
+                            <div class="hobby-item"><i class="fas fa-laptop-code"></i> Tutorials</div>
+                            <div class="hobby-item"><i class="fas fa-share-alt"></i> Knowledge Sharing</div>
+                            <div class="hobby-item"><i class="fas fa-users"></i> Social Activities</div>
+                            <div class="hobby-item"><i class="fas fa-lightbulb"></i> Learning New Tech</div>
                         </div>
                     </div>
 
-                    <!-- Role 2 -->
-                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-card glass-card">
-                            <div class="timeline-header">
-                                <div class="company-logo-placeholder">
-                                    <i class="fas fa-video"></i>
-                                </div>
-                                <div class="timeline-meta">
-                                    <h3 class="role-title">Graphics Designer – Film & Animation</h3>
-                                    <span class="company-name">VR2 Production House</span>
-                                </div>
-                                <div class="timeline-date">
-                                    <span class="badge">Prior to 2020</span>
-                                </div>
-                            </div>
-                            <div class="timeline-body">
-                                <ul>
-                                    <li>Conceptualized and designed high-impact visual content and motion graphics for professional film and animation productions.</li>
-                                    <li>Collaborated cross-functionally with creative teams to deliver precise multimedia assets under tight deadlines.</li>
-                                </ul>
-                            </div>
+                    <div>
+                        <div class="personal-grid stagger-children">
+                            <div class="personal-box"><h6>Father's Name</h6><h3>Poovappa Poojary</h3></div>
+                            <div class="personal-box"><h6>Mother's Name</h6><h3>Jayanthi</h3></div>
+                            <div class="personal-box"><h6>Date of Birth</h6><h3>28/12/1998</h3></div>
+                            <div class="personal-box"><h6>Gender</h6><h3>Male</h3></div>
+                            <div class="personal-box"><h6>Marital Status</h6><h3>Unmarried</h3></div>
+                            <div class="personal-box"><h6>Nationality</h6><h3>Indian</h3></div>
+                            <div class="personal-box" style="grid-column:1/-1"><h6>Languages Known</h6><h3>Kannada, English, Hindi, Tulu, Tamil, Malayalam</h3></div>
                         </div>
                     </div>
-
-                    <!-- Role 3 -->
-                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-card glass-card">
-                            <div class="timeline-header">
-                                <div class="company-logo-placeholder">
-                                    <i class="fas fa-laptop-code"></i>
-                                </div>
-                                <div class="timeline-meta">
-                                    <h3 class="role-title">Web Developer</h3>
-                                    <span class="company-name">Vels Technologies</span>
-                                </div>
-                                <div class="timeline-date">
-                                    <span class="badge">Prior to 2020</span>
-                                </div>
-                            </div>
-                            <div class="timeline-body">
-                                <ul>
-                                    <li>Contributed to the full software development lifecycle of client web applications, accelerating project delivery timelines.</li>
-                                    <li>Engineered functional modules and optimized existing codebase for performance enhancements.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- ========================= EDUCATION SECTION ========================= -->
-        <section id="education" class="section education-section">
+        <!-- ========================= CONTACT ========================= -->
+        <section id="contact" class="section section-alt">
             <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h2 class="section-title">Education</h2>
-                    <div class="title-line"></div>
-                </div>
-
-                <div class="education-grid">
-                    
-                    <div class="edu-card glass-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
-                        <div class="edu-year">2019</div>
-                        <h3 class="edu-degree">Bachelor of Computer Applications</h3>
-                        <h4 class="edu-school">Sri Vivekananda College, Puttur</h4>
-                        <p class="edu-univ">Mangalore University</p>
-                        <div class="edu-score">Aggregate: <span>74.48%</span></div>
+                <div class="split-layout">
+                    <div>
+                        <span class="title-heading reveal">Contact</span>
+                        <h1 class="display-heading reveal">Let's <span class="text-gradient">Talk</span></h1>
                     </div>
 
-                    <div class="edu-card glass-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="edu-icon"><i class="fas fa-book"></i></div>
-                        <div class="edu-year">2016</div>
-                        <h3 class="edu-degree">Pre-University Course (PUC)</h3>
-                        <h4 class="edu-school">Vittal Pre-University College</h4>
-                        <p class="edu-univ">Vitla</p>
-                        <div class="edu-score">Aggregate: <span>69.67%</span></div>
-                    </div>
-
-                    <div class="edu-card glass-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="edu-icon"><i class="fas fa-school"></i></div>
-                        <div class="edu-year">2014</div>
-                        <h3 class="edu-degree">SSLC</h3>
-                        <h4 class="edu-school">Government High School</h4>
-                        <p class="edu-univ">Salethur</p>
-                        <div class="edu-score">Aggregate: <span>60.16%</span></div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ========================= CONTACT SECTION ========================= -->
-        <section id="contact" class="section contact-section">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h2 class="section-title">Get In Touch</h2>
-                    <div class="title-line"></div>
-                </div>
-
-                <div class="contact-wrapper glass-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="contact-info-panel">
-                        <h3>Let's Connect</h3>
-                        <p>I'm currently exploring new opportunities as a Senior Software Engineer. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
-                        
-                        <div class="contact-details">
-                            <a href="mailto:rajeshmave6@gmail.com" class="contact-detail-item">
-                                <div class="icon-box"><i class="fas fa-envelope"></i></div>
-                                <div class="detail-content">
-                                    <span class="label">Email</span>
-                                    <span class="value">rajeshmave6@gmail.com</span>
-                                </div>
-                            </a>
-                            <a href="tel:+919900489174" class="contact-detail-item">
-                                <div class="icon-box"><i class="fas fa-phone"></i></div>
-                                <div class="detail-content">
-                                    <span class="label">Phone</span>
-                                    <span class="value">+91 9900489174</span>
-                                </div>
-                            </a>
-                            <div class="contact-detail-item">
-                                <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
-                                <div class="detail-content">
-                                    <span class="label">Location</span>
-                                    <span class="value">Karnataka, India</span>
-                                </div>
+                    <div>
+                        <div class="contact-info-row reveal">
+                            <div>
+                                <span class="sm-heading">Email:</span>
+                                <h3>rajeshmave6@gmail.com</h3>
+                            </div>
+                            <div>
+                                <span class="sm-heading">Call:</span>
+                                <h3>+91 9900489174</h3>
                             </div>
                         </div>
 
-                        <div class="social-links">
-                            <a href="https://linkedin.com/in/rajeshpoojary" target="_blank" class="social-icon" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://github.com/rajeshpoojary" target="_blank" class="social-icon" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
+                        <div class="contact-address reveal">
+                            <span class="sm-heading">Address:</span>
+                            <p>Mave House, Salethur Post & Village, Bantwal Taluk, D.K-574323</p>
                         </div>
-                    </div>
 
-                    <div class="contact-form-panel">
-                        <form id="contact-form" class="premium-form">
-                            <div class="form-row">
-                                <div class="input-group">
-                                    <input type="text" id="name" required placeholder=" ">
-                                    <label for="name">Full Name</label>
-                                    <div class="input-line"></div>
-                                </div>
-                                <div class="input-group">
-                                    <input type="email" id="email" required placeholder=" ">
-                                    <label for="email">Email Address</label>
-                                    <div class="input-line"></div>
-                                </div>
+                        <div class="reveal" style="margin-top:48px">
+                            <span class="sm-heading">Connect:</span>
+                            <div class="contact-buttons-row">
+                                <a href="assets/Rajesh-Resume.pdf" class="button button-white hover-target" download="Rajesh-Resume.pdf">
+                                    <span>Download Resume</span>
+                                    <span class="dot"></span>
+                                </a>
+                                <a href="https://github.com/Rajesh-poojary" target="_blank" class="button-circle hover-target"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/rajesh-poojary-8ab97a269/" target="_blank" class="button-circle hover-target"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.instagram.com/rajesh_birwass?igsh=MW0yajZ0dXh0eDUwbw==" target="_blank" class="button-circle hover-target"><i class="fab fa-instagram"></i></a>
+                                <a href="https://wa.me/919900489174" target="_blank" class="button-circle hover-target"><i class="fab fa-whatsapp"></i></a>
                             </div>
-                            <div class="input-group">
-                                <input type="text" id="subject" required placeholder=" ">
-                                <label for="subject">Subject</label>
-                                <div class="input-line"></div>
-                            </div>
-                            <div class="input-group">
-                                <textarea id="message" rows="4" required placeholder=" "></textarea>
-                                <label for="message">Your Message</label>
-                                <div class="input-line"></div>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-submit">
-                                <span>Send Message</span>
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- ========================= FOOTER ========================= -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-logo">Rajesh Poojary</div>
-            <p class="copyright">&copy; 2026 Rajesh Poojary. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- AOS Script -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <!-- Main Script -->
     <script src="js/script.js"></script>
 </body>
 </html>
